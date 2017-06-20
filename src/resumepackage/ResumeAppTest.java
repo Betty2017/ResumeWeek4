@@ -18,6 +18,22 @@ public class ResumeAppTest {
 		System.out.println("Your full name name is: "+me.getFname()+" "+me.getLname()+" and your e-mail address is "+me.getEmail());
 		System.out.println(me.getFname()+"'s user id is:"+me.getPersonid());
 		
+		
+		Education edu1 = new Education();
+		edu1 = setDegree("BS in Psychology");
+		edu1 = setInstitution("UMaryland");
+		edu1 = setYear(2000);
+		edu1.addEdutoDB(me.getPersonid());
+		
+		
+		Education edu2 = new Education();
+		edu2 = setDegree("MS in Software Engineering");
+		edu2 = setInstitution("Johns Hopkins U");
+		edu2 = setYear(2005);
+		edu2.addEdutoDB(me.getPersonid());
+		
+		
+		
 		//Create a new job 
 		Job job1 = new Job(); 
 		job1.setJcompany("Another College");

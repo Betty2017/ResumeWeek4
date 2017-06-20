@@ -42,7 +42,7 @@ public class Person {
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/resume?"+ "user=root&password=password");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/resume?"+ "user=root&password=Password1");
 			stmt = con.prepareStatement(insertsql);
             stmt.setString(2,this.fname);
 			stmt.setString(3,this.lname);
@@ -121,5 +121,21 @@ public class Person {
 		}
 		
 	}
+	public void listMyEdus(){
+
+		for(Job job : myjoblist){
+			
+			System.out.println(job.getJobID());
+			System.out.println(job.getJcompany());
+			System.out.println(job.getJtitle());
+			for(String duty : job.getJobDuties())
+			{
+				System.out.println(duty);
+			}
+		}
+		
+	}
+	
+	
 }
 

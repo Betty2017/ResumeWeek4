@@ -31,7 +31,7 @@ public class Job {
 		PreparedStatement stmt=null;	
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-	        java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost/resume?"+ "user=root&password=password");
+	        java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/resume?"+ "user=root&password=Password1");
 			stmt = con.prepareStatement(insertSQL);
 			stmt.setInt(1,this.getJobID());
 			stmt.setString(2,dutystring);

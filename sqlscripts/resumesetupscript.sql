@@ -1,3 +1,6 @@
+create schema resume;
+use resume;
+
 CREATE TABLE `resume`.`persontable` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `fname` VARCHAR(50) NULL,
@@ -20,3 +23,14 @@ create table jobduties (
  jobid int, 
  jobduty varchar(50)
 );
+
+CREATE TABLE `resume`.`educationtable` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `degree` VARCHAR(50) NULL,
+  `institution` VARCHAR(50) NULL,
+  `year` INT(10) NULL,
+  `personid` INT NULL,
+  PRIMARY KEY (`id`));
+
+select * from persontable;
+select * from jobtable;
